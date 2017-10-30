@@ -7,10 +7,6 @@
   padding: 20px;
 }
 
-.box{
-  background-color: #000066;
-}
-
 .home_ctn {
   overflow: hidden;
 }
@@ -26,6 +22,11 @@
 .home_leftcol{
   width: 680px;
   float: left;
+}
+
+.home_rightcol {
+  width: 308px;
+  float: right;
 }
 
 .home_tab_col{
@@ -103,11 +104,6 @@
   transition: opacity 0.25s;
 }
 
-.large .tab_item_cap img {
-  width: 231px;
-  height: 87px;
-}
-
 .tab_item_content {
   white-space: nowrap;
   overflow: hidden;
@@ -130,37 +126,12 @@
   color: #c7d5e0;
   font-size: 1.25em;
   line-height: 18px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   display: block;
   overflow: hidden;
-
-  transition: color 0.25s;
-}
-
-span.platform_img {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-}
-
-span.platform_img.steamplay {
-  width: 64px;
-  background-image: url( '/public/images/v6/icon_steamplay.png' );
-  padding-right: 5px;
-}
-
-span.platform_img.win {
-  background-image: url( '/public/images/v6/icon_platform_win.png' );
-}
-
-span.platform_img.ps4 {
-  background-image: url( 'http://sms.playstation.com/static/img/global/footer/icon-playstation.png' );
 }
 
 .home_ctn.tab_container {
-  background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);  padding-top: 1px; /* Crappy hack to turn off margin collapsing */
+  background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);  padding-top: 1px;
   margin-top: 60px;
   background-color: #ffffff;
 }
@@ -194,11 +165,6 @@ span.platform_img.ps4 {
   line-height: 20px;
 }
 
-.tab_item_details span.platform_img {
-  vertical-align: bottom;
-  opacity: 0.3;
-}
-
 .tab_item_top_tags {
   height: 20px;
   white-space: normal;
@@ -209,4 +175,34 @@ span.platform_img.ps4 {
   white-space: nowrap;
 }
 
+#profile_container {
+  position: relative;
+  background: #ffffff;  height: 500px; width: 300px;
+  margin-bottom: 20px;
+}
 
+.profile {
+  position: absolute;
+  top: 9px;
+}
+
+.profile_upper{
+  margin: 15px;
+  padding: 20px;
+  background-color: blue;
+}
+
+.profile_bottom{
+
+}
+
+.login_form{
+  color: #4da6ff;
+  font-size: 0.9em;
+  background: #e6ffff;
+  box-sizing: border-box;
+  margin: 25px 500px 75px;
+  width: 280px;
+  height: 260px;
+  padding: 10px;
+}
