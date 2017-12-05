@@ -3,8 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller{
     public function index(){
-		$this->load->helper('url');
-        // load session
+		
+		if($this->session->userdata('status') === 'login') {
+			redirect(base_url('index.php/user/welcome'));
+			return;
+		}
+		
+		/*$this->load->view('login');
+		}
         $this->load->library('session');
         if (!isset($_SESSION['email'])){
             $this->load->view('sign_in');
@@ -15,5 +21,9 @@ class User extends CI_Controller{
             $data['response'] = $this->m_user->get($id);
             $this->load->view('viw_home', $data);
         }
+		*/
     }
+	public function login_form() {
+		$this->load->view('sign_in');
+	}
 }

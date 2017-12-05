@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<p><img src="https://peopleofgaming.com/wiki/images/archive/9/94/20150406194144%21Steam.png" alt="SteamLogo" style="width:80px;height:80px;"/></p>
 	</div>
 	<div class="navbar">
-		<a href="#home">Home</a>
+		<?php echo anchor('index.php', 'Home') ?></a>
 		<div class="dropdown">
 			<button class="dropbtn">Games 
 			<i class="fa fa-caret-down"></i>
@@ -150,7 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									Welcome Guest
 									</div>
 									<div class="login_message">
-									<?php echo anchor('User/sign_in', 'Sign In') ?>
+									<?php echo anchor('index.php/User/login_form', 'Sign In') ?></a>
 									</div>
 								</div>
 							</div>

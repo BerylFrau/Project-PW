@@ -32,15 +32,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</p>
 			<p style="text-indent: 35px;">
 				Password<input type="password" name="pwd" style="margin-left: 35px" required="">
-			<?php //<p style=" font-size: 0.7em; text-indent: 155px;">
-			// <a href="www.bluelion.com/forgotpass">forgot password?</a> ?> 
+			
 			</p>
 			<br>
 			<input type="submit" value="Login"  style="background: #008ae6;font-size: 2.0em; color: #005c99;  position: relative; float:right; right: 90px;">
 			<br><br><br>
-			<?php //<p style="text-align:center;">
-			//	Don't have account? Sign Up
-				//<a href="www.bluelion.com/signup">here</a> ?>
+			
+			<p style="text-align:center;">
+			Don't' have account? Sign Up
+			<a href="www.bluelion.com/signup">here</a>
 			</p>
 		</form>
 		</div>
