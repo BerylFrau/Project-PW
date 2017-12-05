@@ -209,6 +209,7 @@ body{
   background-color: #336699;
   color: white;
   text-align: center;
+  text-decoration: none;
 }
 
 .login_form{

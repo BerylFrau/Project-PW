@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<p><img src="http://oi67.tinypic.com/zm1bpz.jpg" alt="Logo" style="width:150px;height:100px;"/></p>
 	</div>
 	<div class="navbar">
-		<?php echo anchor('index.php/User/home', 'Home') ?></a>
+		<?php echo anchor('index.php/User/home_user', 'Home') ?></a>
 		<div class="dropdown">
 			<button class="dropbtn">Games 
 			<i class="fa fa-caret-down"></i>
@@ -139,17 +139,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<img class="img_profile" src = "https://nerdist.com/wp-content/uploads/2017/08/here-s-how-to-catch-pikachus-before-they-become-super-rare-in-pokemon-go.jpg" width="70px" height="70px">
 									</div>
 									<div class="profile_name">
-										Guest
+										Lala
 									</div>
 								</div>
 							</div>
 							<div id="bottom_container">
 								<div class="profile_bottom">
 									<div class="welcome_message">
-									Welcome Guest
+									Welcome Lala
 									</div>
 									<div class="login_message">
-									<?php echo anchor('index.php/User/login_form', 'Sign In') ?></a>
+									<?php echo anchor('index.php/User/logout', 'Sign Out') ?></a>
 									</div>
 								</div>
 							</div>

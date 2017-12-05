@@ -1,21 +1,63 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
     class m_user extends CI_Model{
+	
+	
+	public function login($userdata)
+	{
+		$result = $this->db->get_where('user',
+			array( 
+				'user_name'=> $userdata['user_name'],
+				'password' => $userdata['password'] 
+			) 
+		);
+		return $result;
+	}
+	
+	public function input($biodata, $users)
+	{
 
-        public function __construct(){
-            $this->load->database();
-        }
-        public function get($id = null){
-            if($id != null){
-                $perintah = $this->db->get_where('users', ['id'=>$id]);
-                return $perintah->result_array();
-            }
-            $perintah = $this->db->get('users');
-            return $perintah->result_array();
-        }
-        public function auth($email, $password){
-            $password_query = md5($password);
-            $result = $this->db->get_where('users',['email' =>$email, 'password'=>$password_query]);
-            return $result->result_array();
-        }
-    }
+		if( $this->db->insert('biodata', $biodata) && $this->db->insert('users', $users) )
+		{
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function tampilAll()
+	{
+		$query = $this->db->get('biodata');
+		return $query;
+	}
+
+	public function tampilByUser($nip)
+	{
+		$query = $this->db->get_where('biodata', array('nip' => $nip));
+		return $query;
+	}
+
+	public function pilih($nip)
+	{
+		$query = $this->db->get_where('biodata', array('nip' => $nip))->row();
+		return $query;
+	}
+	
+	public function update($nip, $nama, $alamat, $jk)
+	{
+		$data = array(
+			'nip' => $nip,
+			'nama' => $nama,
+			'alamat' => $alamat,
+			'jk' => $jk
+		 );
+		$this->db->where('nip',$nip);
+		$this->db->update('biodata', $data);
+	}
+
+	public function delete($nip)
+	{
+		$this->db->delete('biodata', array('nip' => $nip));
+	}
+}
 ?>

@@ -2,28 +2,129 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller{
-    public function index(){
-		
+public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('m_user');
+		$this->load->library('session');
+	}
+
+	public function index()
+	{
 		if($this->session->userdata('status') === 'login') {
-			redirect(base_url('index.php/user/welcome'));
+			redirect(base_url('index.php/login/tampil_data'));
 			return;
 		}
-		
-		/*$this->load->view('login');
+		$this->load->view('login');
+	}
+
+	public function daftar() {
+		$this->load->view('form');
+	}
+
+	public function input_data()
+	{
+
+		$biodata = array(
+			'nip' => $this->input->post('nip'),
+			'nama' => $this->input->post('nama'),
+			'alamat' => $this->input->post('alamat'),
+			'tempat_lahir' => $this->input->post('tempat_lahir'),
+			'tgl_lahir' => $this->input->post('tgl_lahir'),
+			'jk' => $this->input->post('jk'),
+			'email' => $this->input->post('email'),
+		);
+		$users = array(
+			'user_name' => $this->input->post('user_name'),
+			'password' => sha1( $this->input->post('password') ),
+			'nip' => $this->input->post('nip')
+		);
+
+		if( $this->m_user->input($biodata, $users) )
+		{
+			redirect(base_url('index.php/login'));
+		} else {
+			$this->load->view('login');
 		}
-        $this->load->library('session');
-        if (!isset($_SESSION['email'])){
-            $this->load->view('sign_in');
-        }else{
-            // ngambil param id dari user 
-            $id = $this->input->get('id');
-            $this->load->model('m_user');
-            $data['response'] = $this->m_user->get($id);
-            $this->load->view('viw_home', $data);
-        }
-		*/
-    }
-	public function login_form() {
+	}
+	public function user_login() 
+	{
+		$user_user = array(
+			'user_name' => $this->input->post('user_name'),
+			'password' => $this->input->post('password')
+		);
+		$result = $this->m_user->login($user_user);
+		if( $result->row() == null ) {
+			redirect(base_url('index.php/User/login_form'));
+			return;
+		}
+		$sess_user = array(
+			'user_name' => $result->row('user_name'),
+			'level' => $result->row('level'),
+			'status' => 'login'
+		);
+		
+		$this->session->set_userdata($sess_user);
+		redirect(base_url('index.php/User/home_user'));		
+	}
+
+	public function logout() {
+		$this->session->sess_destroy();
+		redirect(base_url('index.php/User/home'));
+	}
+
+	public function tampil_data()
+	{
+		if($this->session->userdata('status') !== 'login') {
+			redirect(base_url('index.php/login/'));
+			return;
+		}
+		else if($this->session->userdata('level') === '1') {
+			$data["mhs"] = $this->m_user->tampilAll();
+		} else {
+			$nip = $this->session->userdata('nip');
+			$data["mhs"] = $this->m_user->tampilByUser($nip);
+		}
+		$this->load->view('tampil_data', $data);
+	}
+
+	public function edit_data()
+	{
+		$nip = $this->uri->segment(3);
+		$this->load->model('m_user');
+		$data["mhs"] = $this->m_user->pilih($nip);
+		$this->load->view('edit', $data);
+	}
+
+	public function update_data()
+	{
+		$nip = $this->input->post("nip");
+		$nama = $this->input->post("nama");
+		$alamat = $this->input->post("alamat");
+		$jk = $this->input->post("jk");
+
+		$this->load->model('m_user');
+		$this->m_user->update($nip, $nama, $alamat, $jk);
+		redirect(base_url("index.php/login/tampil_data"));
+	}
+
+	public function delete_data()
+	{
+		$nip = $this->uri->segment(3);
+		$this->load->model('m_user');
+		$this->m_user->delete($nip);
+		redirect(base_url("index.php/login/tampil_data"));
+	}
+	
+		public function login_form() {
 		$this->load->view('sign_in');
+	}
+	
+		public function home() {
+		$this->load->view('home_game');
+	}
+	
+	public function home_user() {
+		$this->load->view('home_user');
 	}
 }
