@@ -14,10 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		return $result;
 	}
 	
-	public function input($biodata, $users)
+	public function input($user)
 	{
 
-		if( $this->db->insert('biodata', $biodata) && $this->db->insert('users', $users) )
+		if( $this->db->insert('user', $user) )
 		{
 			return TRUE;
 		} else {

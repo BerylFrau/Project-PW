@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<?php echo link_tag('assets/css/styleRe.css')?>
 	<link rel="icon" href="http://oi67.tinypic.com/zm1bpz.jpg">
-	<title>Sign In</title>
+	<title>Sign Up</title>
 	
 </head>
 
@@ -47,8 +47,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div id="login_container">
 		<div class="login_form">
-		<form action=<?php echo base_url('index.php/User/user_login'); ?> method="POST">
-			<h2 style="text-align:center; font-family: Comic San MS, cursive, sans-serif;"><b>SIGN IN</b></h2>
+		<form action=<?php echo base_url('index.php/User/input'); ?> method="POST">
+			<h2 style="text-align:center; font-family: Comic San MS, cursive, sans-serif;"><b>SIGN UP</b></h2>
+			<p style="text-indent: 35px;">
+				Email<input type="text" name="email" style="margin-left: 35px" required="">
+			</p>
 			<p style="text-indent: 35px;">
 				Username<input type="text" name="user_name" style="margin-left: 35px" required="">
 			</p>
@@ -57,12 +60,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			</p>
 			<br>
-			<input type="submit" value="Login"  style="background: #cc0000;font-size: 2.0em; color: white;  position: relative; float:right; right: 90px;">
+			<input type="submit" value="SUBMIT"  style="background: #cc0000;font-size: 2.0em; color: white;  position: relative; float:right; right: 60px;">
 			<br><br><br>
 			
-			<p style="text-align:center;">
-			Don't have account? Sign Up
-			<?php echo anchor('index.php/User/input_form', 'here') ?></a>
 			</p>
 		</form>
 		</div>

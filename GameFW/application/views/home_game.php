@@ -150,6 +150,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div>
 									<div class="login_message">
 									<?php echo anchor('index.php/User/login_form', 'Sign In') ?></a>
+									or
+									<?php echo anchor('index.php/User/input_form', 'Sign Up') ?></a>
 									</div>
 								</div>
 							</div>

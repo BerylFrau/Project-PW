@@ -22,36 +22,26 @@ public function __construct()
 		$this->load->view('form');
 	}
 
-	public function input_data()
+	public function input()
 	{
-
-		$biodata = array(
-			'nip' => $this->input->post('nip'),
-			'nama' => $this->input->post('nama'),
-			'alamat' => $this->input->post('alamat'),
-			'tempat_lahir' => $this->input->post('tempat_lahir'),
-			'tgl_lahir' => $this->input->post('tgl_lahir'),
-			'jk' => $this->input->post('jk'),
-			'email' => $this->input->post('email'),
-		);
-		$users = array(
+		$user = array(
 			'user_name' => $this->input->post('user_name'),
-			'password' => sha1( $this->input->post('password') ),
-			'nip' => $this->input->post('nip')
+			'password' => ( $this->input->post('password') ),
+			'email' => $this->input->post('email')
 		);
 
-		if( $this->m_user->input($biodata, $users) )
+		if( $this->m_user->input($user) )
 		{
-			redirect(base_url('index.php/login'));
+			redirect(base_url('index.php/User/login_form'));
 		} else {
-			$this->load->view('login');
+			$this->load->view('sign_up');
 		}
 	}
 	public function user_login() 
 	{
 		$user_user = array(
 			'user_name' => $this->input->post('user_name'),
-			'password' => $this->input->post('password')
+			'password' => ( $this->input->post('password') )
 		);
 		$result = $this->m_user->login($user_user);
 		if( $result->row() == null ) {
@@ -116,15 +106,19 @@ public function __construct()
 		redirect(base_url("index.php/login/tampil_data"));
 	}
 	
-		public function login_form() {
+	public function login_form() {
 		$this->load->view('sign_in');
 	}
 	
-		public function home() {
+	public function home() {
 		$this->load->view('home_game');
 	}
 	
 	public function home_user() {
 		$this->load->view('home_user');
+	}
+	
+	public function input_form() {
+		$this->load->view('sign_up');
 	}
 }
