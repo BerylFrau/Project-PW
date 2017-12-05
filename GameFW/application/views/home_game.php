@@ -17,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-	<div class="title">
-			<p><img src="https://peopleofgaming.com/wiki/images/archive/9/94/20150406194144%21Steam.png" alt="SteamLogo" style="width:80px;height:80px;"/></p>
+	<div class="web_logo">
+			<p><img src="http://oi67.tinypic.com/zm1bpz.jpg" alt="Logo" style="width:150px;height:100px;"/></p>
 	</div>
 	<div class="navbar">
 		<?php echo anchor('index.php', 'Home') ?></a>

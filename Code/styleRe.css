@@ -3,10 +3,84 @@
   margin: 0;
 }
 
+body{
+    background-color: #cc0000;
+}
+
+/* Base */
 .container{
   padding: 20px;
 }
 
+.web_logo{
+  background-color: #660000;
+  padding: 10px;
+}
+
+.navbar{
+  margin-bottom: 120px;
+  overflow: hidden;
+  background-color: #990000;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 1px solid black;
+}
+
+.navbar a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  border-right: 1px solid black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff3333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Home */
 .home_ctn {
   overflow: hidden;
 }
@@ -33,93 +107,18 @@
   position: relative;
 }
 
-.title{
-  background-color: #000033;
-  padding: 10px;
-}
-
-.navbar{
-  margin-bottom: 120px;
-  overflow: hidden;
-  background-color: #336699;
-}
-
-.navbar a{
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-right: 1px solid #ffffff;
-}
-
-.navbar a:hover{
-  background-color: #ddd;
-  color: black;
-}
-
-.column{
-  float: left;
-  padding: 10px;
-}
-
-.column.left{
-  width: 70%;
-}
-
-.column.right{
-  width: 30%;
-}
-
-.row:after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-@media (max-width: 600px) {
-    .column.left, .column.right {
-        width: 100%;
-    }
-}
-
-.table{
-  padding: 20px;
-  table-layout: auto;
-  border-collapse: separate;
-  border-spacing: 5px;
-  background-color: #4d4dff;
-  border: 0px;
-  width: 634px;
-}
-
 .tab_item_cap {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 3;
   line-height: 69px;
-
-  transition: opacity 0.25s;
 }
 
 .tab_item_content {
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-
   padding-top: 6px;
   font-size: 12px;
-}
-
-.large .tab_item_content {
-  padding-top: 16px;
-}
-
-.home_tabs_content .tab_item_content {
-
-  padding-top: 7px;
 }
 
 .tab_item_name {
@@ -131,48 +130,22 @@
 }
 
 .home_ctn.tab_container {
-  background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);  padding-top: 1px;
-  margin-top: 60px;
-  background-color: #ffffff;
-}
-
-
-.home_tabs_content .discount_block .discount_prices, .tab_content_ctn .discount_block .discount_prices  {
-  background: transparent;
-}
-.home_tabs_content .tab_item_discount.no_discount {
-  margin-top: 24px;
-}
-.home_tabs_content .tab_item_discount {
-  margin-top: 17px;
+  padding-top: 1px;
+  background-color: black;
 }
 
 .tab_item {
   position: relative;
   display: block;
-  background: #202d39;
   background: rgba( 0, 0, 0, 0.2 );
-
   height: 69px;
-
   margin-bottom: 5px;
   padding-left: 198px;
 }
 
 .tab_item_details {
-  color: #384959;
-
+  color: #e6e6e6;
   line-height: 20px;
-}
-
-.tab_item_top_tags {
-  height: 20px;
-  white-space: normal;
-  overflow: hidden;
-}
-
-.tab_item_top_tags .top_tag {
-  white-space: nowrap;
 }
 
 #profile_container {
@@ -198,17 +171,17 @@
 }
 
 .profile_image{
-	 margin-left: -2.5cm;
-	 margin-top: -1.5cm;
+   margin-left: -2.5cm;
+   margin-top: -1.5cm;
 }
 
 .profile_name{
-	margin-top: -1.9cm;
-	width: 100px;
-	height: 30px;
-	background-color: #336699;
-	color: white;
-	text-align: center;
+  margin-top: -1.9cm;
+  width: 100px;
+  height: 30px;
+  background-color: #336699;
+  color: white;
+  text-align: center;
 }
 
 #bottom_container {
@@ -222,20 +195,20 @@
   padding: 1px;
 }
 .welcome_message{
-	margin: 1px 20px;
-	padding: 10px 0px 10px;
-	background-color: #336699;
-	color: white;
-	text-align: center;
+  margin: 1px 20px;
+  padding: 10px 0px 10px;
+  background-color: #336699;
+  color: white;
+  text-align: center;
 }
 
 .login_message{
-	margin: 20px -1px; 
-	padding: 40px 1px 10px;
-	height: 120px;
-	background-color: #336699;
-	color: white;
-	text-align: center;
+  margin: 20px -1px; 
+  padding: 40px 1px 10px;
+  height: 120px;
+  background-color: #336699;
+  color: white;
+  text-align: center;
 }
 
 .login_form{
@@ -248,3 +221,82 @@
   height: 260px;
   padding: 10px;
 }
+
+/* Content */
+.rotateimg340{
+  position: absolute;
+  left: 640px;
+  top: 200px;
+  -webkit-transform:rotate(340deg);
+  transform: rotate(340deg);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#top .line{position:absolute;}
+#top .shadow{position: absolute;}
+#top .shadow .about-p5s{position:absolute;left: -10px; top: 405px}
+#top .shadow .school-lifes{position:absolute;left: 320px; top: 1020px}
+
+/* Title Spec*/
+#top .scene_title .spec{position: relative;left: 700px; margin-top: -120px}
+#top .scene_title .spec .game_spec_s{position: absolute; left: 20px; top: 10px; z-index: -1}
+#top .scene_title .spec .text{font-family: "MV Boli";position:absolute;line-height:1.9;font-size:17px;font-weight: 550;}
+#top .scene_title .spec .title{top:216px;left:260px}
+#top .scene_title .spec .platform{top:251px;left:275px}
+#top .scene_title .spec .rating{top:285px;left:270px}
+#top .scene_title .spec .genre{top:318px;left:265px}
+#top .scene_title .spec .publisher{top:373px;left:283px}
+#top .scene_title .spec .score{top:408px;left:257px}
+
+/* Scene 1 */
+#top .scene1 .about-p5 .whatis{position:absolute;top:70px;left:160px}
+#top .scene1 .about-p5 .text{font-family: "MV Boli";position:absolute;color:#fff;line-height:1.9;font-size:13.5px;top:245px;left:210px}
+
+/* Scene 2 */
+#top .scene2 .school-life{margin-left: 300px}
+#top .scene2 .school-life .text{font-family: "MV Boli";position:absolute;color: #fff;line-height: 1.9;font-size: 13.5px;top: 290px;left:540px}
+
+/* Animation */
+.slide-from-left{
+  opacity: 1;
+  animation: slide-from-left .4s forwards;
+}
+
+.right-left-up {
+  left: -2000px;
+  opacity: 0;
+  animation: right-left-up .5s forwards;
+}
+
+@-webkit-keyframes right-left-up{
+  0%{
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    transform:translate3d(-200px,200px,0) scale(.7);
+    opacity:0
+  }
+  14%{
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    transform:translate3d(74px,-74px,0) scale(1.111);
+    opacity:1.37
+  }
+  28%{
+    -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-32px,32px,0) scale(.952);opacity:.84}46%{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(8px,-8px,0) scale(1.012);opacity:1.04}58%{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-3.28px,3.28px,0) scale(.99508);opacity:.9836}74%{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(1.16px,-1.16px,0) scale(1.00174);opacity:1.0058}89%{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-.4px,.4px,0) scale(.9994);opacity:.998}100%{-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(0,0,0) scale(1);opacity:1}}@keyframes left-right-up{0%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-200px,200px,0) scale(.7);opacity:0}14%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(74px,-74px,0) scale(1.111);opacity:1.37}28%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-32px,32px,0) scale(.952);opacity:.84}46%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(8px,-8px,0) scale(1.012);opacity:1.04}58%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-3.28px,3.28px,0) scale(.99508);opacity:.9836}74%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(1.16px,-1.16px,0) scale(1.00174);opacity:1.0058}89%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(-.4px,.4px,0) scale(.9994);opacity:.998}
+    100%{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;transform:translate3d(0,0,0) scale(1);opacity:1}}
+
+@keyframes slide-from-left{
+    0%   {margin-left: -200px;}
+    12.5%  {margin-left: -175px;}
+    25%  {margin-left: -150px;}
+    37.5%  {margin-left: -125px;}
+    50%  {margin-left: -100px;}
+    62.5%  {margin-left: -75px;}
+    75%  {margin-left: -50px;}
+    87.5%  {margin-left: -25px;}
+    100% {margin-left: 0;}
+}
+
+/* https://vignette.wikia.nocookie.net/plantsvszombies/images/b/b4/Persona_5_dialogue_box_clean_by_agroover-dbd8yit.png/revision/latest?cb=20170710142608 */
+/* https://orig00.deviantart.net/c680/f/2017/270/6/f/persona_5_dialog_box_by_rodroseasons-dborar3.png */
