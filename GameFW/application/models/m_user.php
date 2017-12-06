@@ -31,9 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		return $query;
 	}
 
-	public function tampilByUser($nip)
+	public function tampilByUser($id_user)
 	{
-		$query = $this->db->get_where('biodata', array('nip' => $nip));
+		$query = $this->db->get_where('user', array('id_user' => $id_user));
 		return $query;
 	}
 

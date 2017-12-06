@@ -50,12 +50,12 @@ public function __construct()
 		}
 		$sess_user = array(
 			'user_name' => $result->row('user_name'),
-			'level' => $result->row('level'),
+			'id_user' => $result->row('id_user'),
 			'status' => 'login'
 		);
 		
 		$this->session->set_userdata($sess_user);
-		redirect(base_url('index.php/User/home_user'));		
+		redirect(base_url('index.php/User/home'));		
 	}
 
 	public function logout() {
@@ -115,10 +115,23 @@ public function __construct()
 	}
 	
 	public function home_user() {
-		$this->load->view('home_user');
+		
+		if($this->session->userdata('status') !== 'login') {
+			redirect(base_url('index.php/User/login_form'));
+			return;
+		}
+		else {
+			$id_user = $this->session->userdata('id_user');
+			$data["game"] = $this->m_user->tampilByUser($id_user);
+		}
+		$this->load->view('home_user', $data);
 	}
 	
 	public function input_form() {
 		$this->load->view('sign_up');
+	}
+	
+	public function persona5() {
+		$this->load->view('Persona5');
 	}
 }

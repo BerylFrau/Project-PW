@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<p><img src="http://oi67.tinypic.com/zm1bpz.jpg" alt="Logo" style="width:150px;height:100px;"/></p>
 	</div>
 	<div class="navbar">
-		<?php echo anchor('index.php', 'Home') ?></a>
+		<?php echo anchor('index.php/User/home', 'Home') ?></a>
 		<div class="dropdown">
 			<button class="dropbtn">Games 
 			<i class="fa fa-caret-down"></i>

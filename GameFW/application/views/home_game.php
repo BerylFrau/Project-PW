@@ -48,20 +48,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="home_leftcol home_tab_col">
 					<div class="home_tabs_content">
 					<div class="tab_content" id="tab_newreleases_content">
-					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  data-ds-appid="356190">
+					<a href="<?php echo site_url('index.php/User/persona5') ?>" class="tab_item  "  data-ds-appid="356190">
 					<div class="tab_item_cap" >
-						<img class="tab_item_cap_img" src="http://cdn.edgecast.steamstatic.com/steam/apps/356190/capsule_184x69.jpg?t=1507601625">
+						<img class="tab_item_cap_img" src="http://gameranx.com/wp-content/uploads/2016/03/Persona-5-1080-Wallpaper-3.jpg" width="185px" height="70px" >
 					</div>
 					<div class="tab_item_content">
 						<div class="tab_item_name">
-							Middle-earth™: Shadow of War™
+							Persona 5
 						</div>
 						<div class="tab_item_details">
 							<img src="http://sms.playstation.com/static/img/global/footer/icon-playstation.png" width="20px" height="20px">
 							<div class="tab_item_top_tags">
-								<span class="top_tag">Open World,</span>
-								<span class="top_tag"> Action,</span>
-								<span class="top_tag"> Violent</span>
+								<span class="top_tag">RPG</span>
 							</div>
 						</div>
 					</div>
@@ -139,19 +137,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<img class="img_profile" src = "https://nerdist.com/wp-content/uploads/2017/08/here-s-how-to-catch-pikachus-before-they-become-super-rare-in-pokemon-go.jpg" width="70px" height="70px">
 									</div>
 									<div class="profile_name">
-										Guest
+									<?php 
+									if($this->session->userdata('status') !== 'login') {
+									echo ("Guest");
+									}
+									else{
+									echo ("User");
+									}
+									?>
 									</div>
 								</div>
 							</div>
 							<div id="bottom_container">
 								<div class="profile_bottom">
 									<div class="welcome_message">
-									Welcome Guest
+									<?php 
+									if($this->session->userdata('status') !== 'login') {
+									echo ("Welcome Guest");
+									}
+									else{
+									echo ("Welcome User");
+									}
+									?>
 									</div>
 									<div class="login_message">
-									<?php echo anchor('index.php/User/login_form', 'Sign In') ?></a>
-									or
-									<?php echo anchor('index.php/User/input_form', 'Sign Up') ?></a>
+									<?php 
+									if($this->session->userdata('status') !== 'login') {
+									echo anchor('index.php/User/login_form', 'Sign In');
+									echo (" or ");
+									echo anchor('index.php/User/input_form', 'Sign Up');
+									}
+									else{
+									echo anchor('index.php/User/logout', 'Sign Out');
+									}
+									?>
 									</div>
 								</div>
 							</div>
