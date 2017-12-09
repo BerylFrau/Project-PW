@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="home_leftcol home_tab_col">
 					<div class="home_tabs_content">
 					<div class="tab_content" id="tab_newreleases_content">
-					<a href="<?php echo site_url('index.php/listG/persona5') ?>" class="tab_item  "  >
+					<a href="<?php echo site_url('index.php/User/persona5') ?>" class="tab_item  "  >
 					<div class="tab_item_cap" >
 						<img class="tab_item_cap_img" src="http://gameranx.com/wp-content/uploads/2016/03/Persona-5-1080-Wallpaper-3.jpg" width="185px" height="70px" >
 					</div>
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<a href="http://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" class="tab_item  "  >
 					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/698780/capsule_184x69.jpg?t=1507294824">
+						<img class="tab_item_cap_img" src="http://cdn.edgecast.steamstatic.com/steam/apps/698780/capsule_184x69.jpg?t=1507294824">
 					</div>
 					<div class="tab_item_content">
 						<div class="tab_item_name">
@@ -88,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<a href="https://www.totalwar.com/total_war_warhammer" class="tab_item  "  >
 					<div class="tab_item_cap" >
-						<img src="http://cdn.edgecast.steamstatic.com/steam/apps/594570/capsule_184x69.jpg?t=1507215631">
+						<img class="tab_item_cap_img" src="http://cdn.edgecast.steamstatic.com/steam/apps/594570/capsule_184x69.jpg?t=1507215631">
 					</div>
 					<div class="tab_item_content">
 						<div class="tab_item_name">
@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
 					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/268910/capsule_184x69.jpg?t=1507409276">
+						<img class="tab_item_cap_img" src="http://cdn.edgecast.steamstatic.com/steam/apps/268910/capsule_184x69.jpg?t=1507409276">
 					</div>
 					<div class="tab_item_content">
 						<div class="tab_item_name">

@@ -44,91 +44,79 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div class="container">
 		<div class="home_ctn tab_container" style="overflow: visible;">
-			<div class="home_page_content">
+			<div class="home_page_content" >
 				<div class="home_leftcol home_tab_col">
-					<div class="home_tabs_content">
+					
 					<div class="tab_content" id="tab_newreleases_content">
-					<a href="<?php echo site_url('index.php/listG/persona5') ?>" class="tab_item  "  >
+					<a href="" class="tab_item  ">
 					<div class="tab_item_cap" >
-						<img class="tab_item_cap_img" src="http://gameranx.com/wp-content/uploads/2016/03/Persona-5-1080-Wallpaper-3.jpg" width="185px" height="70px" >
+						<img class="tab_item_cap_img" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Atlus_logo_2014.png" width="185px" height="70px" >
 					</div>
+					
 					<div class="tab_item_content">
 						<div class="tab_item_name">
-							Persona 5
+							ATLUS
 						</div>
-						<div class="tab_item_details">
-							<img src="http://sms.playstation.com/static/img/global/footer/icon-playstation.png" width="20px" height="20px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">RPG</span>
-							</div>
+						<div class="tab_item_name" style="font-size:10px">
+							Atlus Co., Ltd. (株式会社アトラス Kabushiki gaisha Atorasu) is a Japanese video game developer, publisher and distribution company based in Tokyo, and a subsidiary of Sega.
 						</div>
-					</div>
-					<div style="clear: both;"></div>
-					</a>
-
-					<a href="http://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/698780/capsule_184x69.jpg?t=1507294824">
-					</div>
-					<div class="tab_item_content">
-						<div class="tab_item_name">
-							Doki Doki Literature Club!
-						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Visual Novel,</span>
-								<span class="top_tag"> Anime,</span>
-								<span class="top_tag"> Psychological Horror</span>
-							</div>
-						</div>
-					</div>
-					<div style="clear: both;"></div>
-					</a>
-
-					<a href="https://www.totalwar.com/total_war_warhammer" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img src="http://cdn.edgecast.steamstatic.com/steam/apps/594570/capsule_184x69.jpg?t=1507215631">
-					</div>
-					<div class="tab_item_content">
-						<div class="tab_item_name">
-							Total War: WARHAMMER II
-						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Strategy,</span>
-								<span class="top_tag"> Fantasy,</span>
-								<span class="top_tag"> RTS</span>
-							</div>
-						</div>
+						
 					</div>
 					<div style="clear: both;"></div>
 					</a>
 
 					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
 					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/268910/capsule_184x69.jpg?t=1507409276">
+						<img class="tab_item_cap_img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Konami_4th_logo_2.svg/1921px-Konami_4th_logo_2.svg.png" width="170px" height="50px" >
 					</div>
 					<div class="tab_item_content">
 						<div class="tab_item_name">
-							Cuphead
+							KONAMI
 						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Difficult,</span>
-								<span class="top_tag"> Platformer,</span>
-								<span class="top_tag"> Cartoon</span>
-							</div>
+						<div class="tab_item_name" style="font-size:10px">
+							Konami, is a Japanese entertainment company. It operates as a product distributor, video game developer and publisher company.
 						</div>
 					</div>
 					<div style="clear: both;"></div>
 					</a>
+
+					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
+					
+					<div class="tab_item_cap" >
+						<img class="tab_item_cap_img" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Capcom_logo.png" width="185px" height="70px" >
 					</div>
+					<div class="tab_item_content">
+						<div class="tab_item_name">
+							CAPCOM
+						</div>
+						<div class="tab_item_name" style="font-size:10px">
+							 Capcom, is a Japanese video game developer and publisher known for creating multi-million-selling franchises such as Street Fighter, Resident Evil, Devil May Cry, and Monster Hunter
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+					</a>
+
+					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
+					
+					<div class="tab_item_content">
+						<div class="tab_item_name">
+							ELECTRONIC ART
+						</div>
+						<div class="tab_item_cap" >
+						<img class="tab_item_cap_img" src="https://vignette.wikia.nocookie.net/fifa/images/e/e8/EA_GAMES_LOGO.png/revision/latest?cb=20161222182808" width="185px" height="70px" >
+					</div>
+						<div class="tab_item_name" style="font-size:10px">
+							 Electronic Arts Inc. (EA) is an American video game company headquartered in Redwood City, California. Founded and incorporated on May 28, 1982 by Trip Hawkins
+						</div>
+						</div>
+					
+						
+					
+					</a>
+					
 					</div>
 				</div>
-				<div class="home_rightcol">
+<div class="home_rightcol">
 					<div id="profile_container">
 						<div class="profile">
 							<div id="upper_container">

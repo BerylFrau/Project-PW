@@ -25,12 +25,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 	}
 
-	public function tampilAll()
+	public function tampilnama()
 	{
-		$query = $this->db->get('biodata');
+		$query = $this->db->get('user');
 		return $query;
 	}
-
+	
+	
 	public function tampilByUser($id_user)
 	{
 		$query = $this->db->get_where('user', array('id_user' => $id_user));

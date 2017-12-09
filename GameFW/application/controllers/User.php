@@ -63,16 +63,14 @@ public function __construct()
 		redirect(base_url('index.php/User/home'));
 	}
 
-	public function tampil_data()
+	public function tampil_nama()
 	{
 		if($this->session->userdata('status') !== 'login') {
-			redirect(base_url('index.php/login/'));
+			redirect(base_url('index.php/User/login_form'));
 			return;
 		}
-		else if($this->session->userdata('level') === '1') {
-			$data["mhs"] = $this->m_user->tampilAll();
-		} else {
-			$nip = $this->session->userdata('nip');
+		 else {
+			$id_user = $this->session->userdata('id_user');
 			$data["mhs"] = $this->m_user->tampilByUser($nip);
 		}
 		$this->load->view('tampil_data', $data);
@@ -114,6 +112,26 @@ public function __construct()
 		$this->load->view('home_game');
 	}
 	
+	public function platform() {
+		$this->load->view('platform');
+	}
+	
+	public function company() {
+		$this->load->view('company');
+	}
+	
+	public function genre() {
+		$this->load->view('genre/genre');
+	}
+	
+	public function publisher() {
+		$this->load->view('publisher');
+	}
+	
+	public function rating() {
+		$this->load->view('rating');
+	}
+	
 	public function home_user() {
 		
 		if($this->session->userdata('status') !== 'login') {
@@ -131,7 +149,7 @@ public function __construct()
 		$this->load->view('sign_up');
 	}
 	
-	public function persona5() {
-		$this->load->view('Persona5');
-	}
+	
+
+	
 }

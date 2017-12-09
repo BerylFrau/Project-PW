@@ -48,86 +48,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="home_leftcol home_tab_col">
 					<div class="home_tabs_content">
 					<div class="tab_content" id="tab_newreleases_content">
-					<a href="<?php echo site_url('index.php/listG/persona5') ?>" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img class="tab_item_cap_img" src="http://gameranx.com/wp-content/uploads/2016/03/Persona-5-1080-Wallpaper-3.jpg" width="185px" height="70px" >
-					</div>
+					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
+					
 					<div class="tab_item_content">
 						<div class="tab_item_name">
-							Persona 5
+							Windows
 						</div>
-						<div class="tab_item_details">
-							<img src="http://sms.playstation.com/static/img/global/footer/icon-playstation.png" width="20px" height="20px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">RPG</span>
-							</div>
-						</div>
-					</div>
-					<div style="clear: both;"></div>
-					</a>
-
-					<a href="http://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/698780/capsule_184x69.jpg?t=1507294824">
-					</div>
-					<div class="tab_item_content">
-						<div class="tab_item_name">
-							Doki Doki Literature Club!
-						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Visual Novel,</span>
-								<span class="top_tag"> Anime,</span>
-								<span class="top_tag"> Psychological Horror</span>
-							</div>
-						</div>
-					</div>
-					<div style="clear: both;"></div>
-					</a>
-
-					<a href="https://www.totalwar.com/total_war_warhammer" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img src="http://cdn.edgecast.steamstatic.com/steam/apps/594570/capsule_184x69.jpg?t=1507215631">
-					</div>
-					<div class="tab_item_content">
-						<div class="tab_item_name">
-							Total War: WARHAMMER II
-						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Strategy,</span>
-								<span class="top_tag"> Fantasy,</span>
-								<span class="top_tag"> RTS</span>
-							</div>
-						</div>
+						
 					</div>
 					<div style="clear: both;"></div>
 					</a>
 
 					<a href="http://store.steampowered.com/app/356190/Middleearth_Shadow_of_War/?snr=1_4_4__tab-PopularNewReleases" class="tab_item  "  >
-					<div class="tab_item_cap" >
-						<img  src="http://cdn.edgecast.steamstatic.com/steam/apps/268910/capsule_184x69.jpg?t=1507409276">
-					</div>
+					
 					<div class="tab_item_content">
 						<div class="tab_item_name">
-							Cuphead
+							Sony
 						</div>
-						<div class="tab_item_details">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Windows_logo_2012-Black.svg" width="15px" height="15px">
-							<div class="tab_item_top_tags">
-								<span class="top_tag">Difficult,</span>
-								<span class="top_tag"> Platformer,</span>
-								<span class="top_tag"> Cartoon</span>
-							</div>
-						</div>
+						
 					</div>
 					<div style="clear: both;"></div>
 					</a>
+
 					</div>
 					</div>
-				</div>
+				</div>			
 				<div class="home_rightcol">
 					<div id="profile_container">
 						<div class="profile">
